@@ -1,0 +1,25 @@
+.hero {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 80px;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    &__button {
+        background-color: $accent;
+        color: $primary-light;
+        height: 70px;
+        text-transform: uppercase;
+        border: none;
+
+        &:hover {
+            background-color: $accent-hover;
+        }
+    }
+}
