@@ -11,4 +11,102 @@
         @include font(18px, 400, 20px);
         text-align: center;
     }
+
+    &__toggle {
+        @extend %flex;
+        background-color: $gray;
+        width: fit-content;
+        margin: 0 auto;
+        padding: 5px;
+        border-radius: 25px;
+        gap: 5px;
+        margin-bottom: 24px;
+
+        &-button {
+            @include font(16px, 400, 35px);
+            background-color: transparent;
+            color: $primary-light;
+            border: none;
+            padding: 4px 16px;
+            border-radius: 20px;
+
+            &--active {
+                background-color: $accent;
+            }
+        }
+    }
+
+    &__list {
+        @extend %flex;
+        gap: 24px;
+    }
+
+    &__item {
+        width: calc((100% - 48px) / 3);
+        border: 1px solid $secondary-light;
+        padding: 40px 45px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__logo {
+        width: fit-content;
+        height: 40px;
+    }
+
+    &__name {
+        @include font(24px, 700, 28px);
+        margin: 25px 0 8px;
+    }
+
+    &__ads {
+        margin-top: 0;
+    }
+
+    &__features {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        color: $secondary-light;
+        flex-grow: 1;
+        margin-bottom: 35px;
+
+        &-item {
+            @include font(16px, 400, 26px);
+            display: flex;
+            align-items: start;
+            gap: 10px;
+        }
+    }
+
+    &__price {
+        color: $secondary-light;
+
+        &--big {
+            @include font(28px, 700, 36px);
+            color: $primary-light;
+        }
+    }
+
+    &__button {
+        @include font(18px, 400, 20px);
+        height: 60px;
+        background-color: $accent;
+        color: $primary-light;
+        border: none;
+        border-radius: 4px;
+
+        &:hover {
+            background-color: $accent-hover;
+        }
+    }
+
+    &__note {
+        @include font(12px, 400, 20px);
+        text-align: center;
+        margin-top: 16px;
+        color: $secondary-light;
+    }
 }
